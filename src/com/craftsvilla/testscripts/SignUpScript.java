@@ -1,4 +1,4 @@
-package com.crafstvilla.testscripts;
+package com.craftsvilla.testscripts;
 
 import org.testng.annotations.Test;
 
