@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="CraftsVilla">
+  <test thread-count="5" name="Regression">
+  <classes> 
+  <!-- <class name="com.crafstvilla.testscripts.KundanJewelleryScript"> </class> -->
+  <class name="com.crafstvilla.testscripts.SignUpScript"></class>
+  </classes>
+  </test> <!-- Regression -->
+</suite> <!-- CraftsVilla -->

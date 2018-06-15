@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [CraftsVilla]">
+  <test thread-count="5" name="Regression(failed)">
+    <classes>
+      <class name="com.crafstvilla.testscripts.SignUpScript">
+        <methods>
+          <include name="CloseApp"/>
+          <include name="SignUp"/>
+          <include name="OpenApp"/>
+        </methods>
+      </class> <!-- com.crafstvilla.testscripts.SignUpScript -->
+    </classes>
+  </test> <!-- Regression(failed) -->
+</suite> <!-- Failed suite [CraftsVilla] -->
