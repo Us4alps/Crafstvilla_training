@@ -1,5 +1,6 @@
 package com.craftsvilla.generic;
 
+import org.apache.log4j.Logger;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -13,6 +14,7 @@ import org.testng.Reporter;
 public class BasePage {
 	
 	public static WebDriver driver = null;
+	public static Logger log = Logger.getLogger(BasePage.class);
 	
 	public BasePage(WebDriver driver)
 	{
@@ -27,11 +29,14 @@ public class BasePage {
 			wait.until(ExpectedConditions.titleContains(exp_title));
 			String act_title = driver.getTitle();
 			Assert.assertEquals(act_title, exp_title);
+			log.info("Actual and expected titles are equal");
 		}
 		
 		catch (Exception e) {
 			e.printStackTrace();
 			Reporter.log(exp_title + "not found. Failed to load page");
+			//The reporter .log can be replaced by logger class
+			log.error("Expected Title couldn't be found");
 		}
 	}
 
@@ -41,11 +46,12 @@ public class BasePage {
 		try
 		{
 			wait.until(ExpectedConditions.visibilityOf(wElem));
+			log.info(wElem + "Element is present");
 			
 		}
 		
 		catch (Exception e) {
-			// TODO: handle exception
+			log.error(wElem + "Element is not found");
 		}
 	}
 	
